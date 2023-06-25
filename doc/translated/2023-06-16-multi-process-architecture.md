@@ -1,5 +1,7 @@
 # 多进程架构
-> 原文: [Multi-process Architecture](https://www.chromium.org/developers/design-documents/multi-process-architecture/)
+> 原文: [Multi-process Architecture](https://www.chromium.org/developers/design-documents/multi-process-architecture/)  
+> 创建时间: 2023-06-16  
+> 更新时间: 2023-06-16
 
 本篇文章用于描述 Chromium 的高级架构以及它是如何在多进程类型中被划分的。
 
@@ -17,7 +19,7 @@ Chromium 使用多进程是为了保护整个应用免受渲染引擎或其他�
 
 我们把运行 UI、管理渲染器和其他进程的主进程称为 “浏览器进程” 或 “浏览器”。同样地，处理网页内容的进程被称为 “渲染器进程” 或 “渲染器”。渲染器使用 [Blink](https://www.chromium.org/blink/) 开源布局引擎来解释铺设 HTML。
 
-![multi-process-architecture-arch](pic/multi-process-architecture-arch.png)
+![multi-process-architecture-arch](	https://storage-1301473886.cos.ap-guangzhou.myqcloud.com/img/multi-process-architecture/multi-process-architecture-arch.png)
 
 ### 管理渲染器进程
 
@@ -64,3 +66,7 @@ Chromium 使用多进程是为了保护整个应用免受渲染引擎或其他�
 ## 额外的进程类型
 
 Chromium 也将其他组件分割成独立的进程，有时是以特定平台的形式。例如，它现在有一个独立的 GPU 进程，网络服务和存储服务。沙盒化的实用进程也能被用于小型或有风险的任务，这被用作满足 [Rule of Two](https://chromium.googlesource.com/chromium/src/+/master/docs/security/rule-of-2.md) 安全的一种方式。
+
+## 参考说明
+
+本文所引用的图片均出自于 [原文 (Multi-process Architecture)](https://www.chromium.org/developers/design-documents/multi-process-architecture/)
