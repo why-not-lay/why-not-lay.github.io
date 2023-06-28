@@ -16,11 +16,9 @@
 
 ### DOM (Document Object Model)
 
-<div style="background: white">
 
-![DOM](	https://storage-1301473886.cos.ap-guangzhou.myqcloud.com/img/rendering-pipline/DOM.svg)
+![DOM](	https://storage-1301473886.cos.ap-guangzhou.myqcloud.com/img/rendering-pipline/DOM.png)
 
-</div>
 <center style="font-size:12px;color:#C0C0C0">图 2: DOM 节点结构</center>
 
 DOM 以树型结构存储在内存中，树中的节点有着如下属性: 
@@ -32,22 +30,16 @@ DOM 以树型结构存储在内存中，树中的节点有着如下属性:
 
 DOM 是文档在 Chrome 内部的抽象表示，同时也通过 V8 对外暴露文档查询和修改的 API。
 
-<div style="background: white">
+![composed-tree](	https://storage-1301473886.cos.ap-guangzhou.myqcloud.com/img/rendering-pipline/shadow-tree.png)
 
-![composed-tree](	https://storage-1301473886.cos.ap-guangzhou.myqcloud.com/img/rendering-pipline/shadow-tree.svg)
-
-</div>
 <center style="font-size:12px;color:#C0C0C0">图 3: composed tree</center>
 
 对于包含 Shdow Tree 的 DOM Tree 被称为 Composed Tree，而 Shadow Tree 在 DOM Tree 中挂载的节点被称作 shadow host，每个 shadow host 和 Shadow Tree 一一对应。
 
 值得注意的是，在 Shadow Tree 的根节点被称作 shadow root，但 shadow root 和 shadow host 并不存在树结构中的父子关系。
 
-<div style="background: white">
+![flat-tree](	https://storage-1301473886.cos.ap-guangzhou.myqcloud.com/img/rendering-pipline/flat-tree.png)
 
-![flat-tree](	https://storage-1301473886.cos.ap-guangzhou.myqcloud.com/img/rendering-pipline/flat-tree.svg)
-
-</div>
 <center style="font-size:12px;color:#C0C0C0">图 4: composed tree</center>
 
 为了后续 [layout](#layout) 流程的处理，Composed Tree 会通过 Tree Flattening 操作被转化为 Flat Tree。
