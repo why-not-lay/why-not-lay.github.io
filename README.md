@@ -6,3 +6,5 @@
 [Chrome 渲染管线简述](./doc/learned/2023-06-19-rendering-pipeline.md)
 
 [DNS 简述](./doc/learned/2023-06-27-dns.md)
+
+[数字证书简述](./doc/learned/2023-06-29-digital-certificate.md)
