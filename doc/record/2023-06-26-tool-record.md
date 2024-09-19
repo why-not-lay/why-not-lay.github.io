@@ -12,6 +12,8 @@
 
 [plantuml](https://plantuml.com/zh/): uml 图
 
+[paths](https://jxnblk.io/paths/): svg path
+
 ## 系统工具
 
 [uncap](https://github.com/susam/uncap#readme): windows 键位映射，主要用于 caps Lock 和 esc 切换，`uncap -k` 可以用于停止运行。
